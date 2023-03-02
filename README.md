@@ -8,5 +8,24 @@
 STS install -> localhost:9000/main.toy
 
 <br/><br/>
-<h2>1.개발환경</h2>
-![java_original_wordmark_logo_icon_146459](https://user-images.githubusercontent.com/112395421/222423896-b081e089-f5c7-4c8e-9d22-dfaf8e52e0b8.png)
+<h2>1. 개발환경</h2>
+<h4>✨ Backend</h4>
+<span>
+  <img src="https://user-images.githubusercontent.com/112395421/222424007-76e84516-2825-4a40-94d9-9e85857c2336.png"/>
+  <img src="https://user-images.githubusercontent.com/112395421/222424075-116c248b-3536-4238-8ccf-f970caeed365.png" width="75" height="75"/>&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://user-images.githubusercontent.com/112395421/222424225-67fc6b73-e269-463a-81ca-b61c091c580c.png" width="65" height="90"/>&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://user-images.githubusercontent.com/112395421/222424271-c0220900-8df8-4a75-80b7-2663b1996317.png" />
+</span>
+<br><br>
+
+<h4>✨ Frontend</h4>
+<span>
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://user-images.githubusercontent.com/112395421/222424225-67fc6b73-e269-463a-81ca-b61c091c580c.png" width="65" height="90"/>&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://user-images.githubusercontent.com/112395421/222424310-b43f81c9-dc3f-4247-8cec-d1560a6ac24c.png" width="90" height="90" />
+  <img src="https://user-images.githubusercontent.com/112395421/222424316-be97f8d6-3dcf-46b7-b795-af2943dd3b99.png" width="90" height="90"/>&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://user-images.githubusercontent.com/112395421/222424325-7dcae130-7561-49de-8033-ca1f01a761c5.png" width="75" height="75"/>
+</span>
+<br/><br/>
+
+<h2>2. 화면구성</h2>
