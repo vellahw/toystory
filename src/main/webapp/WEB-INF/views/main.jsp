@@ -199,7 +199,22 @@
 		naver_id_login.get_naver_userprofile("naverSignInCallback()");
 		// 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function
 		function naverSignInCallback() {
-			/* alert(naver_id_login.getProfileData('email'));
+			
+			var email = naver_id_login.getProfileData('email');
+			
+			$.ajax({
+		          url : "/login/loginPro.toy", 
+		         type : "post",
+		         data : { m_email : email },
+		         dataType : 'json',
+		         success : function(result) {
+		         },
+		 		error: function(result){
+					console.log(result.responseText); //responseText의 에러메세지 확인
+				}
+		      });
+			
+			
 			alert(naver_id_login.getProfileData('nickname'));
 			alert(naver_id_login.getProfileData('age')); */
 		}
