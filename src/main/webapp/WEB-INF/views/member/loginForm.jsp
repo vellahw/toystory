@@ -81,6 +81,7 @@
 
 						</tbody>
 					</table>
+		</form>
 					<!-- 네이버 로그인 버튼 노출 영역 -->
 					<div id="naver_id_login"
 						style="text-align: center; margin-top: 21px;"></div>
@@ -88,18 +89,16 @@
 					<script type="text/javascript">
 						var naver_id_login = new naver_id_login(
 								"43wP2dYx4JznPIszkbF1",
-								"http://localhost:9000/login/loginPro.toy");
+								"http://localhost:8080/login/loginPro.toy");
 						var state = naver_id_login.getUniqState();
 						naver_id_login.setButton("green", 3, 50);
 						naver_id_login
-								.setDomain("http://localhost:9000/login/login.toy");
+								.setDomain("http://localhost:8080/main.toy");
 						naver_id_login.setState(state);
 						/* naver_id_login.setPopup(); */
 						naver_id_login.init_naver_id_login();
 					</script>
-		</div>
 		</fieldset>
-		</form>
 
 
 	</section>

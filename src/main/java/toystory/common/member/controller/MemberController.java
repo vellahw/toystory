@@ -74,12 +74,19 @@ public class MemberController {
 
 	// 로그인 처리, 이후 메인으로 보냄
 	@PostMapping("/login/loginPro.toy")
-	public String loginCheck(HttpServletRequest request, RedirectAttributes rttr, MemberModel memberModel) {
+	public String loginCheck(@RequestParam("email") String m_email, HttpServletRequest request, RedirectAttributes rttr, MemberModel memberModel) {
 
 		MemberModel resultMemberModel = memberService.loginCheck(memberModel);
 
 		if (resultMemberModel != null) {
 			HttpSession session = request.getSession();
+			
+			if (m_email != null) {
+				System.out.println("네아로~~~~~" + m_email);
+				
+				resultMemberModel.setM_email(m_email);
+				session.setAttribute("loginId", m_email);
+			}
 
 			// 로그인 후 세션 설정...
 			session.setAttribute("loginMember", resultMemberModel);
