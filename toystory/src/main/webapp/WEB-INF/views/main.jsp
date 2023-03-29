@@ -85,30 +85,36 @@
 										<c:out value="${product.g_brand}" />
 										]
 										<c:out value="${product.g_name}" />
-									</p></strong> <strong><p class="price" align="center">
+									</p></strong>
+									<strong style="font-size: 15px;">
+										<p class="price" align="center">
 										<c:if test="${product.g_sale ne 0}">
-											<p>
-												${product.g_sale}%&nbsp;&nbsp;<span
-													style="text-decoration: line-through;">${product.g_price }</span>
-											</p>
+											<!-- 할인중이라면 -->
+											<div style="margin-bottom: 4px;">
+												<span style="text-decoration: line-through; color: #c2c2c2; font-weight: normal;">
+													${product.g_price }원
+												</span>
+												<span style="color: red;">(${product.g_sale}%)</span>
+											</div>
 											<c:if
 												test="${(product.g_price * (100-product.g_sale)) / 100 lt 1}">
 												<fmt:formatNumber type="number"
 													pattern="###,###,###,###,###,###"
-													value="${(product.g_price * (100-product.g_sale)) / 100 +1}" />₩
-		            	</c:if>
+													value="${(product.g_price * (100-product.g_sale)) / 100 +1}" />원
+		            						</c:if>
 											<c:if
 												test="${(product.g_price * (100-product.g_sale)) / 100 gt 1}">
 												<fmt:formatNumber type="number"
 													pattern="###,###,###,###,###,###"
-													value="${(product.g_price * (100-product.g_sale)) / 100}" />₩
-		            	</c:if>
+													value="${(product.g_price * (100-product.g_sale)) / 100}" />원
+		            						</c:if>
 										</c:if>
 										<c:if test="${product.g_sale eq 0}">
 											<fmt:formatNumber type="number"
-												pattern="###,###,###,###,###,###" value="${product.g_price}" />₩
-		            </c:if>
-									</p></strong>
+												pattern="###,###,###,###,###,###" value="${product.g_price}" />원
+		            					</c:if>
+										</p>
+								</strong>
 							</div>
 						</c:forEach>
 
@@ -142,40 +148,41 @@
 								style="text-align: center; font-size: small;">
 								<a href="/goods/detail.toy?g_id=${product.g_id }"><img
 									src="${pageContext.request.contextPath}/resources/assets/img/image/${product.f_svname }"
-									class="radius_img" alt=""></a> <br /> <strong><p
-										class="ingredients" align="center">
-										[
-										<c:out value="${product.g_brand}" />
-										]
-										<c:out value="${product.g_name}" />
-									</p></strong>
-								<!-- <strong><p class="price" align="center"> -->
+									class="radius_img" alt=""></a> <br />
+									<strong>
+										<p class="ingredients" align="center">
+											[
+											<c:out value="${product.g_brand}" />
+											]
+											<c:out value="${product.g_name}" />
+										</p>
+									</strong>
 								<c:if test="${product.g_sale ne 0}">
-
-									<c:if
-										test="${(product.g_price * (100-product.g_sale)) / 100 lt 1}">
+								<!-- 할인 중이라면 -->
+									<div style="font-size: 15px; margin-bottom: 4px;">
+										<span style="text-decoration: line-through; color: #c2c2c2; font-weight: normal;">${product.g_price }원</span>
+										<span style="color: red;">&nbsp;(${product.g_sale}%)</span>
+									</div>
+									<p style="font-size: 15px;">
+									<c:if test="${(product.g_price * (100-product.g_sale)) / 100 lt 1}">
 										<fmt:formatNumber type="number"
 											pattern="###,###,###,###,###,###"
-											value="${(product.g_price * (100-product.g_sale)) / 100 +1}" />₩
-			            	</c:if>
-
-
+											value="${(product.g_price * (100-product.g_sale)) / 100 +1}" />원
+			            			</c:if>
 									<c:if
 										test="${(product.g_price * (100-product.g_sale)) / 100 gt 1}">
 										<fmt:formatNumber type="number"
 											pattern="###,###,###,###,###,###"
-											value="${(product.g_price * (100-product.g_sale)) / 100}" />₩
-			            	</c:if>
-									<p>
-										<span style="text-decoration: line-through;">${product.g_price }</span>
-										<span>&nbsp;&nbsp;${product.g_sale}%</span>
-									</p>
+											value="${(product.g_price * (100-product.g_sale)) / 100}" />원
+			            			</c:if>
+			            			</p>
 								</c:if>
+								<p style="font-size: 15px;">
 								<c:if test="${product.g_sale eq 0}">
 									<fmt:formatNumber type="number"
-										pattern="###,###,###,###,###,###" value="${product.g_price}" />₩
-		            </c:if>
-								<!-- </strong> -->
+										pattern="###,###,###,###,###,###" value="${product.g_price}" />원
+		            			</c:if>
+		            			</p>
 							</div>
 
 						</c:forEach>

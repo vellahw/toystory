@@ -1,6 +1,7 @@
 /**
  * 230329 한원 리팩토링
  */
+
 var canBtn = document.getElementById("cancel");
 	
 canBtn.addEventListener("click", function(){
@@ -11,11 +12,15 @@ var delBtn = document.getElementById("deleteButton");
 	
 delBtn.addEventListener("click", function(){
 	var fnameList = [];
+    const checkB = document.getElementsByName("item");
+    
+    //체크박스 반복
+    for (let i = 0; i < checkB.length; i++) {
+      if (checkB[i].checked == true) {
+        fnameList.push(checkB[i].value);
+      }
+    }
 
-    $("input[name=item]:checked").each(function(i) {
-	    fnameList.push($(this).val());
-    });
-        
     if(fnameList.length > 0){
     	$.ajax({
         	url : "/admin/notice/modifypro.toy",

@@ -52,7 +52,6 @@
                      <li><a href="/admin/notice/list.toy">공지/이벤트 관리</a></li>
                      <li><a href="/admin/review/list.toy">리뷰/문의 관리</a></li>
                   </ul></li>
-               <!-- <li><a href="#adult">메인페이지관리</a></li> -->
             </ul>
          </div>
          </div>

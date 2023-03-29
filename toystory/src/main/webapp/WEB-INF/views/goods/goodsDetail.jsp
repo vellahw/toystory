@@ -666,13 +666,13 @@ $(document).ready(function(){
 									<tr>
 										<!-- 문의 제목 -->
 										<td class="text-left" width="50%" style="padding-left: 10px;">
-											<div class="panel-faq-container">
-												<p class="panel-faq-title"
+											<div class="qna-container">
+												<p class="qna-title"
 													style="text-align: left; color: #9b55d4">
 													<c:out value="${Qlist.q_title}" />
 													<c:if test="${Qlist.q_comment != null }">[1]</c:if>
 												</p>
-												<div class="panel-faq-answer" style="margin-bottom: 10px; margin-right: 50px; word-break:break-all;">
+												<div class="qna-answer" style="margin-bottom: 10px; margin-right: 50px; word-break:break-all;">
 													<div>
 														<p style="text-align: left; word-break: break-all;">
 															<c:out value="${Qlist.q_content}" />
@@ -747,21 +747,21 @@ $(document).ready(function(){
 			<!-- </section> -->
 		</div>
 	</div>
-	<!-- 스크립트 태그 이 위치에 있어야 하는거 맞아요 -->
-	<script type="text/javascript">
+<!-- 스크립트 태그 이 위치에 있어야 하는거 맞아요 -->
+<script type="text/javascript">
 /* 상품 문의 제목 누르면 내용 접었다 펴기 */
 window.onload = () => {
      // panel-faq-container
-     const panelFaqContainer = document.querySelectorAll(".panel-faq-container"); // NodeList 객체
+     const qnaContainer = document.querySelectorAll(".qna-container"); // NodeList 객체
      
      // panel-faq-answer
-     let panelFaqAnswer = document.querySelectorAll(".panel-faq-answer");
+     let qnaAnswer = document.querySelectorAll(".qna-answer");
 
      // 반복문 순회하면서 해당 FAQ제목 클릭시 콜백 처리
-     for( let i=0; i < panelFaqContainer.length; i++ ) {
-       panelFaqContainer[i].addEventListener('click', function() { // 클릭시 처리할 일
+     for(let i=0; i < qnaContainer.length; i++) {
+    	 qnaContainer[i].addEventListener('click', function() { // 클릭시 처리할 일
          // FAQ 제목 클릭시 -> 본문이 보이게끔 -> active 클래스 추가
-         panelFaqAnswer[i].classList.toggle('active');
+         qnaAnswer[i].classList.toggle('active');
        });
      };
    }

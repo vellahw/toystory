@@ -72,9 +72,12 @@
 											<a href="/goods/detail.toy?g_id=${Rdetail.g_id}"> <c:out
 													value="${Rdetail.g_name}" /></a>&nbsp;&nbsp;
 											<!-- [옵션], [수량] -->
+											<c:if test="${Rdetail.o_option ne null}">
 											옵션 [
 											<c:out value="${Rdetail.o_option}" />
-											] / 수량 [
+											] /
+											</c:if>
+											 수량 [
 											<c:out value="${Rdetail.o_count}" />
 											]
 										</p>

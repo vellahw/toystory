@@ -279,14 +279,14 @@ section {
 
 
 /* 상품 문의 제목 클릭시 내용 접었다 펴기 */
-.panel-faq-container {
+.qna-container {
   margin-bottom: -16px;
 }
-.panel-faq-title {
+.qna-title {
   color: #00eaea;
   cursor: pointer;
 }
-.panel-faq-answer {
+.qna-answer {
   height: 0;
   overflow: hidden;
   /* 변화가 시작되는 쪽에다가 transition 적용해준다 0 -> 300px 

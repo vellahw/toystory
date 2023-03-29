@@ -110,10 +110,10 @@
 $(function() {
    $("#btn").dblclick(function(){
       window.location='/admin_main.toy';
-   })
+   });
    $("#btn").click(function(){
-      window.location='http://localhost:9000';
-   })
+      window.location='/main.toy';
+   });
 });
 </script>
 </body>

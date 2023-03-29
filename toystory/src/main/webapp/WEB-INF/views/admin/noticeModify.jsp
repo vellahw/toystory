@@ -8,7 +8,7 @@
 <html>
 <head>
 <link href="/resources/assets/css/notice.css" rel="stylesheet" />
-<script defer type="text/javascript" src="/resources/js/noticeModify.js"></script>
+<script defer type="text/javascript" src="/resources/assets/js/noticeModify.js"></script>
 <meta charset="UTF-8" />
 </head>
 <body>
@@ -52,8 +52,8 @@
 								<div style="text-align: center;">
 									<img
 										src="${pageContext.request.contextPath}/resources/assets/img/image/${optionArr[status.index]}"
-										style="width: 90%; height: auto;" />&nbsp;&nbsp;&nbsp; <input
-										id="input2" class="check" type="checkbox" name="item"
+										style="width: 90%; height: auto;" />&nbsp;&nbsp;&nbsp;
+									<input id="input2" class="check" type="checkbox" name="item" style="width: 20px; height: 20px;"
 										value="${optionArr[status.index]}"><br /> <br />
 								</div>
 							</c:forEach>
