@@ -25,5 +25,4 @@ public class BasketModel {
 	private int g_sale;
 	private String f_svname;
 	private String m_email;
-
 }

@@ -40,18 +40,12 @@ public class AdminGoodsServiceImpl implements AdminGoodsService {
 
 		goodsModel.setG_option(goodsModel.getG_option().trim());
 		goodsMapper.goodsRegister(goodsModel);
-//		goodsModel.setF_jtkey(goodsModel.getG_id());
 
 		List<AttachFileModel> list = fileUtils.parseInsertFileInfo(goodsModel, request);
 
 		for (int i = 0, size = list.size(); i < size; i++) {
-
 			fileMapper.fileRegister(list.get(i));
-//			fileMapper.mainCheck(list.get(i).getF_num());
-			log.info("서비스 모델 출력" + list.get(i).toString());
-
 		}
-
 	}
 
 	/*

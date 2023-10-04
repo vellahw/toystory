@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-
 public class AttachFileModel {
 
 	   private int f_num;
@@ -19,6 +18,4 @@ public class AttachFileModel {
 	   private Date f_regdate;
 	   private String f_del_yn;
 	   private String f_main_yn;
-	   
-	   
 }
